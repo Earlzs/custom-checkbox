@@ -1,0 +1,173 @@
+
+
+/*custom  switch  style  自定义开关样式*/
+.switch {
+  width: 52px;
+  height: 31px;
+  position: relative;
+  border: 1px solid #dfdfdf;
+  background-color: #fdfdfd;
+  box-shadow: #dfdfdf 0 0 0 0 inset;
+  border-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-clip: content-box;
+  display: inline-block;
+  -webkit-appearance: none;
+  user-select: none;
+  outline: none; 
+}
+.switch:before {
+    content: '';
+    width: 29px;
+    height: 29px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    border-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.switch:checked {
+    border-color: #64bd63;
+    box-shadow: #64bd63 0 0 0 16px inset;
+    background-color: #64bd63;   
+}
+   
+.switch:checked:before {
+    left: 21px;
+ }
+  
+.switch.switch-bg {
+    transition: background-color ease 0.4s;
+}
+.switch.switch-bg:before {
+    transition: left 0.3s; 
+}
+.switch.switch-bg:checked {
+    box-shadow: #dfdfdf 0 0 0 0 inset;
+    background-color: #64bd63;
+    transition: border-color 0.4s, background-color ease 0.4s;
+ }
+.switch.switch-bg:checked:before {
+    transition: left 0.3s;
+}
+.switch.switch-transition {
+    transition: border cubic-bezier(0, 0, 0, 1) 0.4s, box-shadow cubic-bezier(0, 0, 0, 1) 0.4s;
+}
+.switch.switch-transition:before {
+    transition: left 0.3s; 
+}
+.switch.switch-transition:checked {
+    box-shadow: #64bd63 0 0 0 16px inset;
+    background-color: #64bd63;
+    transition: border ease 0.4s, box-shadow ease 0.4s, background-color ease 1.2s;
+}
+.switch.switch-transition:checked:before {
+    transition: left 0.3s; 
+}
+ 
+
+
+
+
+
+/*全局自定义的checkbox样式
+  　使用方式：给　input标签加上custom-checkbox类名后面在跟个label标签，注意input要给id 并且跟后面label标签的for属性对应，
+  　列：  <input type="checkbox" id="checkbox-1-1" class="custom-checkbox" /><label for="checkbox-1-1"></label>
+    radio同checkbox
+    列： <input type="radio" id="radio-1-1" name="radio-1-set" class="custom-radio"  /><label for="radio-1-1"></label>
+*/
+
+ /*custom style checkbox  ----------------------------------自定义多选框start*/
+
+.custom-checkbox {
+	display: none;
+}
+
+.custom-checkbox + label {
+	background-color: #fafafa;
+	border: 1px solid #cacece;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 9px;
+	border-radius: 3px;
+	display: inline-block;
+	position: relative;
+}
+
+.custom-checkbox + label:active, .custom-checkbox:checked + label:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.custom-checkbox:checked + label {
+	background-color: #e9ecee;
+	border: 1px solid #adb8c0;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+	color: #99a1a7;
+}
+
+.custom-checkbox:checked + label:after {
+	content: '\2714';
+	font-size: 14px;
+	position: absolute;
+	top: -4px;
+	left: 3px;
+	color: green;
+}
+label {
+	display: inline;
+}
+ /*custom style checkbox  ----------------------------------自定义多选框end*/
+
+
+
+/* custom style　RADIO    ---------------------------------- 自定义单选框start*/
+
+.custom-radio {
+	display: none;
+}
+
+.custom-radio + label {
+	-webkit-appearance: none;
+	background-color: #fafafa;
+	border: 1px solid #cacece;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 9px;
+	border-radius: 50px;
+	display: inline-block;
+	position: relative;
+}
+
+.custom-radio:checked + label:after {
+	content: ' ';
+	width: 12px;
+	height: 12px;
+	border-radius: 50px;
+	position: absolute;
+	top: 3px;
+	background: #99a1a7;
+	box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);
+	text-shadow: 0px;
+	left: 3px;
+	font-size: 32px;
+}
+
+.custom-radio:checked + label {
+	background-color: #e9ecee;
+	color: #99a1a7;
+	border: 1px solid #adb8c0;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1), inset 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.custom-radio + label:active, .custom-radio:checked + label:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+/* custom style　RADIO    ---------------------------------- 自定义单选框end*/
+

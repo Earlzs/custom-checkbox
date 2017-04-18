@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>HTML5自定义Checkbox和Radiobox</title>
+
+    <style>
+        ul {
+            list-style: none
+        }
+    </style>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background-color: #E4E1EA;
+            font: normal 17px/1.5 Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+            color: #5E5F63;
+        }
+        
+        .wrapper {
+            width:1000px;
+            margin:100px auto;
+        }
+        
+        p {
+            margin: 15px 0 20px 0;
+            font-size: 18px;
+        }
+        
+        li {
+            line-height: 30px;
+        }
+        
+        li span {
+            margin-left: 20px;
+            display: inline-block;
+            vertical-align: top;
+            font-size: 16px;
+            
+        }
+    </style>
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <ul>
+            <li>
+                <p>自定义checkbox </p>
+            </li>
+            <li>
+                <label>
+                    <input class="switch" type="checkbox"><span> 默认未选中</span>
+                </label>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p>switch:switch-bg增加css3动画效果 </p>
+            </li>
+            <li>
+
+                <label><input class="switch switch-bg" type="checkbox" checked><span> 默认选中</span></label>
+            </li>
+
+        </ul>
+              <ul>
+            <li>
+                <p>switch:switch-transition增加css3动画效果 </p>
+            </li>
+            <li>
+
+                <label><input class="switch switch-transition" type="checkbox" checked><span> 默认选中</span></label>
+            </li>
+
+        </ul>
+
+        <br>
+        <hr>
+
+        </ul>
+              <ul>
+            <li>
+               
+                <p>checkbox: </p>
+            </li>
+            <li>
+
+                  <input type="checkbox" id="checkbox-1-1" class="custom-checkbox" /><label for="checkbox-1-1"></label>
+                   <input type="checkbox" id="checkbox-1-2" class="custom-checkbox"  checked/><label for="checkbox-1-2"></label>
+            </li>
+
+        </ul>
+
+         </ul>
+              <ul>
+            <li>
+                <p>radio: </p>
+            </li>
+            <li>
+
+                  <input type="radio" id="radio-1-1" name="radio-1-set" class="custom-radio"  /><label for="radio-1-1"></label><br />
+                   <input type="radio" id="radio-1-2" name="radio-1-set" class="custom-radio" checked /><label for="radio-1-2"></label><br />
+            </li>
+ <p> checkbox和radio 自定义 ：原理很简单，给定一个类名，然后将此元素页面上的display设置为none，从而把它隐藏掉，然后利用CSS3代码来绘制与checkbox邻近的label元素</p>
+ <p> 注意：给lab元素的for属性要与之对应的id相同</p>
+        </ul>
+    </div>
+
+    </div>
+
+</body>
+
+</html>
